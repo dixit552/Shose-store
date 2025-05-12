@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+  
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="image/FootFancy.png" alt="FootFancy Logo" class="logo" />
+      <span class="brand-name">FootFancy</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#"><span class="cart-icon">🛒</span><span class="cart-count">2</span></a></li>
+        <button id="toggle-theme"> <span><i id="theme-icon" class="fas fa-moon"></i></button>
+        
+
+      </ul>
+
+    </nav>
+  </header>
+  <section class="home">
+    <h1>Step Into Style</h1>
+    <p>Explore our latest shoe collection</p>
+  </section>
+
+  <section class="products-card">
+    <!-- Example Product (repeat 10+ times) -->
+    <div class="cards" data-aos="fade-up">
+      <img src="image/card3.webp" width="225px" alt="Shoe 1">
+      <h3>Running Sneakers</h3>
+      <p>$59.99</p>
+      <button onclick="addToCart(this)" data-name="Running Sneakers">Add to Cart</button>
+
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card2.jpeg" width="" alt="Shoe 2">
+      <h3>Classic Loafers</h3>
+      <p>$79.99</p>
+      <button onclick="addToCart(this)" data-name="Classic Loafers">Add to Cart</button>
+
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card5.jpg" width="" alt="Shoe 2">
+      <h3>pump</h3>
+      <p>$85.99</p>
+      <button onclick="addToCart(this)" data-name="pump">Add to Cart</button>
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card6.jpeg" width="" alt="Shoe 2">
+      <h3>Sneakers</h3>
+      <p>$45.99</p>
+      <button onclick="addToCart(this)" data-name="Sneakers">Add to Cart</button>
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card7.jpeg" width="" alt="Shoe 2">
+      <h3>Boot</h3>
+      <p>$28.99</p>
+     <button onclick="addToCart(this)" data-name="Boot">Add to Cart</button>
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card8.jpeg" width="" alt="Shoe 2">
+      <h3>cleat</h3>
+      <p>$65.99</p>
+     <button onclick="addToCart(this)" data-name="cleat">Add to Cart</button>
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card9.jpeg" width="" alt="Shoe 2">
+      <h3>cowboy boot</h3>
+      <p>$34.99</p>
+      <button onclick="addToCart(this)" data-name="cowboy Boot">Add to Cart</button>
+    </div>
+    <div class="cards" data-aos="fade-up" data-aos-delay="100">
+      <img src="image/card10.jpeg" width="" alt="Shoe 2">
+      <h3>slipper</h3>
+      <p>$12.99</p>
+      <button onclick="addToCart(this)" data-name="slipper">Add to Cart</button>
+    </div>
+  </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 FootFancy. All rights reserved.</p>
+      <div class="social">
+        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

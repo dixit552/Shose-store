@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+
+button {
+  background: none;
+  border: 2px solid #555;
+  border-style: none;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode button:hover {
+  background-color: #333;
+  color: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease-in-out;
+  
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  animation: slideInLeft 1s ease-out;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-text button:hover {
+  background: #f39c12;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+  animation: slideInRight 1s ease-out;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.5s ease;
+  border-radius: 16px;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+.cart-icon {
+  font-size: 1.2em;
+  position: relative;
+}
+
+.cart-count {
+  background: #f39c12;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* ... keep your existing CSS, then add/update below */
+
+.products {
+  padding: 40px 20px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product-card {
+  width: 250px;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Color Themes */
+.product-card.red {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.product-card.blue {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.product-card.green {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background: #f39c12;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 300px;
+  color: white;
+  font-style: italic;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.footer .social a {
+  color: #f39c12;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+  .product-grid,
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* home page  */
+.products-card {
+  display: grid;
+  justify-content: center; /* center grid horizontally */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;   /* optional: limit width */
+  margin: 0 auto;      /* center the grid itself */
+}
+
+.cards img {
+  width: 100%;
+  height: 200px;         /* fixed height for consistency */
+  object-fit: cover;     /* maintains aspect ratio, fills the box */
+  border-radius: 10px;
+}
+
+.cards {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+ 
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.cards button:hover {
+  transform: scale(1.05);
+}
+.cards h3 {
+  margin: 10px 0 5px;
+}
+.cards p {
+  color: #888;
+}
+.cards button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal center */
+  justify-content: center; /* vertical center */
+  height: 20vh;           /* optional for full height */
+  text-align: center;
+
+}
